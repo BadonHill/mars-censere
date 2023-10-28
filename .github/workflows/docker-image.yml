@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag "mars-censere:$(date +'%y.%m%d.%H%M')+${{github.sha}}"
+      run: docker build . --file Dockerfile --tag "mars-censere:ci-${{github.sha}}"
